@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+body {
+  font-family: var(--font-montserrat), sans-serif;
+  background-color: #f5f8fa;
+  overflow-x: hidden !important;
+}
+
+a {
+  @apply text-primary-600 underline-offset-2 hover:underline decoration-primary-700;
+}
+
+img {
+  @apply select-none;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  @apply bg-secondary-700;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+/* Container: Tailwind's built-in container with max width control */
+.container {
+  @apply w-full mx-auto;
+  max-width: 1920px; /* enforce max width */
+}
+
+/* Hero typography */
+@layer components {
+  .heroH1 {
+    @apply text-2xl md:text-3xl lg:text-4xl xl:text-[40px] 2xl:text-[50px] leading-tight;
+  }
+}
+
+.full__section_r_p {
+  @apply mx-auto lg:pr-10 xl:pr-20 2xl:pr-sideGutter;
+}
+
+.full__section_l_p {
+  @apply mx-auto lg:pl-10 xl:pl-20 2xl:pl-sideGutter;
+}
+
+
+.full__section_x {
+  @apply mx-auto px-sideGutterSmall md:px-sideGutterMedium lg:px-10 xl:px-20 2xl:px-sideGutter;
+}
