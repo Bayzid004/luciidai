@@ -1,9 +1,10 @@
+import HomePage from '@/components/homePage/HomePage'
 
 export default function Home () {
   return (
     <div className='container'>
-      <div className=''>
-        Bayzid
+      <div className='mt-14'>
+        <HomePage />
       </div>
     </div>
   )
