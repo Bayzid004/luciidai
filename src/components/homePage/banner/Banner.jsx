@@ -30,7 +30,7 @@ const Banner = () => {
             <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 hover:shadow-lg active:scale-95">
               Hire Talents
             </button>
-            <button className="px-6 py-3 bg-green-600 text-white font-medium rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 active:scale-95">
+            <button className="px-6 py-3 bg-green-600 text-white font-bold rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 active:scale-95">
               How We Work
             </button>
           </div>
