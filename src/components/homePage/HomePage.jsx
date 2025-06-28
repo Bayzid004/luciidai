@@ -1,5 +1,9 @@
-import React from 'react'
-import Banner from './banner/Banner'
+import React from "react";
+import Banner from "./banner/Banner";
+import WhyAinovaq from "./whyAinovaq/WhyAinovaq";
+import StepsOfWork from "./stepsofWork/StepsOfWork";
+import BeforeProject from "./beforeProject/BeforeProject";
+import AfterProjectProcess from "./afterProjectProcess/AfterProjectProcess";
 
 const HomePage = () => {
   return (
@@ -7,8 +11,20 @@ const HomePage = () => {
       <section>
         <Banner />
       </section>
+      <section>
+        <WhyAinovaq />
+      </section>
+      <section>
+        <StepsOfWork />
+      </section>
+      <section>
+        <BeforeProject />
+      </section>
+      <section>
+        <AfterProjectProcess/>
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
