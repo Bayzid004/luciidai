@@ -11,8 +11,8 @@ const montserrat = Montserrat({
 })
 
 export const metadata = {
-  title: 'Grand Landscaping',
-  description: 'Grand Landscaping'
+  title: 'AiNovaq',
+  description: 'AiNovaq'
 }
 
 export default function RootLayout ({ children }) {
