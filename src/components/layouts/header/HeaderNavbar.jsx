@@ -47,7 +47,7 @@ const HeaderNavbar = () => {
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
           <Image
-            src=""
+            src="/assets/logo.png"
             width={180}
             height={50}
             alt="Logo"
