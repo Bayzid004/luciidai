@@ -4,6 +4,7 @@ import WhyAinovaq from "./whyAinovaq/WhyAinovaq";
 import StepsOfWork from "./stepsofWork/StepsOfWork";
 import BeforeProject from "./beforeProject/BeforeProject";
 import AfterProjectProcess from "./afterProjectProcess/AfterProjectProcess";
+import ServicesOverview from "./servicesOverview/ServicesOverview";
 
 const HomePage = () => {
   return (
@@ -15,13 +16,16 @@ const HomePage = () => {
         <WhyAinovaq />
       </section>
       <section>
+        <ServicesOverview />
+      </section>
+      <section>
         <StepsOfWork />
       </section>
       <section>
         <BeforeProject />
       </section>
       <section>
-        <AfterProjectProcess/>
+        <AfterProjectProcess />
       </section>
     </div>
   );

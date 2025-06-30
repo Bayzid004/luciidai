@@ -1,90 +1,89 @@
 'use client'
-import React from 'react'
-import { CheckCircle, Users, Globe, Clock, SlidersHorizontal, Wrench } from 'lucide-react'
-import Link from 'next/link'
 
-const WhyAinovaq = () => {
-  const highlights = [
-    {
-      icon: <CheckCircle className="h-6 w-6 text-blue-600" />,
-      title: 'Quality-Driven Annotators',
-    },
-    {
-      icon: <Users className="h-6 w-6 text-blue-600" />,
-      title: 'Global Freelance Workforce',
-    },
-    {
-      icon: <SlidersHorizontal className="h-6 w-6 text-blue-600" />,
-      title: 'Scalable Custom AI Solutions',
-    },
-    {
-      icon: <Clock className="h-6 w-6 text-blue-600" />,
-      title: 'Fast Turnaround with Accuracy',
-    },
-    {
-      icon: <Wrench className="h-6 w-6 text-blue-600" />,
-      title: 'Fine Tune to Its Finest',
-    },
-  ]
+import { BadgeCheck, Globe, Layers, Clock, Settings, ShieldCheck } from 'lucide-react'
 
-  const services = [
-    'Annotation Services',
-    'LLM Training',
-    'Annotations',
-    'Computer Vision',
-    'AI & ML Development',
-    'Custom Solutions',
-    'Coding',
-    'Dataset Curation',
-    'Fine Tuning',
-  ]
-
+export default function WhyAinovaq() {
   return (
-    <section className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      {/* Why Ainovaq */}
-      <div className="max-w-7xl mx-auto mb-12">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">Why Ainovaq?</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {highlights.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 shadow-md rounded-xl flex items-start gap-4 hover:shadow-lg transition"
-            >
-              {item.icon}
-              <h3 className="text-base font-semibold text-gray-700">{item.title}</h3>
-            </div>
-          ))}
-        </div>
+    <section className="py-16 px-4 md:px-20 bg-gray-50">
+      
+      {/* Title & Description */}
+      <div className="text-center max-w-3xl mx-auto mb-12">
+        <h2 className="text-4xl font-bold mb-4 text-gray-800">Why Ainovaq?</h2>
+        <p className="text-gray-600 text-lg">
+          We in Ainovaq use Strategic AI Operations and partners to help organizations build smarter, faster, and more reliable, accurate systems while keeping the human touch. From startups fine-tuning their first model to enterprises scaling annotation pipelines, we deliver unmatched quality, transparency, and flexibility.
+        </p>
       </div>
 
-      {/* Services Overview */}
-      <div className="max-w-7xl mx-auto bg-white p-8 shadow-md rounded-xl">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4 md:mb-0">
-            Services Overview For Your Needs
-          </h2>
-          <Link href="/services">
-            <button className="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-              VIEW ALL
-            </button>
-          </Link>
+      {/* Icon-based Highlights */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        {/* Card 1 */}
+        <div className="rounded-2xl border bg-white shadow-sm p-6 text-center hover:shadow-xl transition">
+          <div className="flex justify-center mb-4">
+            <BadgeCheck className="h-10 w-10 text-blue-600" />
+          </div>
+          <h3 className="text-xl font-semibold mb-2">Quality-Driven Annotators</h3>
+          <p className="text-gray-600">
+            Every contributor is trained in industry-specific annotation workflows, rigorously tested and monitored throughout the project.
+          </p>
         </div>
-        <p className="text-gray-600 mb-6">
-          All-in-one solution to AI training needs in your hand. Ainovaq makes it easy to connect with experts for any data annotations.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="border border-gray-200 p-4 rounded-lg hover:border-blue-600 transition"
-            >
-              <p className="text-gray-700 font-medium">{service}</p>
-            </div>
-          ))}
+
+        {/* Card 2 */}
+        <div className="rounded-2xl border bg-white shadow-sm p-6 text-center hover:shadow-xl transition">
+          <div className="flex justify-center mb-4">
+            <Globe className="h-10 w-10 text-green-600" />
+          </div>
+          <h3 className="text-xl font-semibold mb-2">Global Freelance Workforce</h3>
+          <p className="text-gray-600">
+            Access to multilingual, multicultural talent to help you localize, scale, and diversify your data.
+          </p>
         </div>
+
+        {/* Card 3 */}
+        <div className="rounded-2xl border bg-white shadow-sm p-6 text-center hover:shadow-xl transition">
+          <div className="flex justify-center mb-4">
+            <Layers className="h-10 w-10 text-purple-600" />
+          </div>
+          <h3 className="text-xl font-semibold mb-2">Scalable Custom AI Solutions</h3>
+          <p className="text-gray-600">
+            From 10,000 images to hundreds of thousands of documents—our flexible system scales without compromising quality.
+          </p>
+        </div>
+
+        {/* Card 4 */}
+        <div className="rounded-2xl border bg-white shadow-sm p-6 text-center hover:shadow-xl transition">
+          <div className="flex justify-center mb-4">
+            <Clock className="h-10 w-10 text-yellow-500" />
+          </div>
+          <h3 className="text-xl font-semibold mb-2">Fast Turnaround with Accuracy</h3>
+          <p className="text-gray-600">
+            Optimized workflows and built-in reviews guarantee quick delivery without sacrificing precision.
+          </p>
+        </div>
+
+        {/* Card 5 */}
+        <div className="rounded-2xl border bg-white shadow-sm p-6 text-center hover:shadow-xl transition">
+          <div className="flex justify-center mb-4">
+            <Settings className="h-10 w-10 text-pink-500" />
+          </div>
+          <h3 className="text-xl font-semibold mb-2">Fine-Tune to Its Finest</h3>
+          <p className="text-gray-600">
+            We go beyond annotation—matching output with your objectives, from RAG support to model instruction tweaking.
+          </p>
+        </div>
+
+        {/* Card 6 */}
+        <div className="rounded-2xl border bg-white shadow-sm p-6 text-center hover:shadow-xl transition">
+          <div className="flex justify-center mb-4">
+            <ShieldCheck className="h-10 w-10 text-red-500" />
+          </div>
+          <h3 className="text-xl font-semibold mb-2">Human-in-the-Loop Quality Assurance</h3>
+          <p className="text-gray-600">
+            A robust QA layer overseen by experts ensures every submission meets the highest standards, catching what automation misses.
+          </p>
+        </div>
+
       </div>
     </section>
   )
 }
-
-export default WhyAinovaq
