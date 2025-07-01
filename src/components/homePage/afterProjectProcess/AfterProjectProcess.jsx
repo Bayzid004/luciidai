@@ -67,7 +67,7 @@ const AfterProjectProcess = () => {
             cx={(radius + 20)}
             cy={(radius + 20)}
             r={radius}
-            stroke="#34D399" // Tailwind green-400
+            stroke="#34D399"
             strokeWidth="3"
             fill="none"
             strokeDasharray="8 12"
