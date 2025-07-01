@@ -1,6 +1,6 @@
-'use client'
-import React from 'react'
-import Image from 'next/image'
+"use client";
+import React from "react";
+import Image from "next/image";
 
 const Banner = () => {
   return (
@@ -24,7 +24,10 @@ const Banner = () => {
             Power The AI Foundation with Human Optimization
           </h1>
           <p className="text-sm sm:text-base xl:text-lg py-4">
-            End to end annotation and AI development service for your needs.
+            End-to-end annotation and AI development service for your needs
+            Unlock the full potential of your needs for your AI System through
+            an Expert Team of annotators. Combining Scalable workflows with
+            Human precision to drive next-gen machine learning models
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
             <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 hover:shadow-lg active:scale-95" onClick={() => window.location.href = '/hire-talents'}>
@@ -34,10 +37,11 @@ const Banner = () => {
               How We Work
             </button>
           </div>
+          <p className="text-sm sm:text-base mt-10 md:mt-16 py-4">Powered By Humans, Designed for Scaling</p>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;
