@@ -26,7 +26,7 @@ export default function ServicesOverview() {
         {/* Image */}
         <div className="w-full">
           <Image
-            src="/assets/servicesOverview.webp"
+            src="/assets/ai-generated-8897458_1280.webp"
             alt="AI Services"
             width={600}
             height={400}
