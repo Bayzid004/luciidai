@@ -132,8 +132,7 @@ const Footer = () => {
             <div className="bg-gradient-to-b from-gray-900 to-black text-white px-5 py-4 relative">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Image src="/logo.svg" alt="logo" width={32} height={32} />
-                  <h2 className="text-lg font-semibold">OpenTrain AI</h2>
+                  <h2 className="text-lg font-semibold">Ainovaq</h2>
                 </div>
                 <button onClick={() => setOpen(false)} className="text-white">
                   <X className="w-5 h-5" />
