@@ -21,7 +21,7 @@ const HomePage = () => {
       <section>
         <StepsOfWork />
       </section>
-      <section>
+      <section id="how-we-work">
         <BeforeProject />
       </section>
       <section>
