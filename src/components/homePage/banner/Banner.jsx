@@ -30,14 +30,21 @@ const Banner = () => {
             Human precision to drive next-gen machine learning models
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-            <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 hover:shadow-lg active:scale-95" onClick={() => window.location.href = '/hire-talents'}>
+            <button
+              className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 hover:shadow-lg active:scale-95"
+              onClick={() => (window.location.href = "/hire-talents")}
+            >
               Hire Talents
             </button>
-            <button className="px-6 py-3 bg-green-600 text-white font-bold rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 active:scale-95">
-              How We Work
-            </button>
+            <a href="#how-we-work">
+              <button className="px-6 py-3 bg-green-600 text-white font-bold rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-green-700 hover:scale-105 active:scale-95">
+                How We Work
+              </button>
+            </a>
           </div>
-          <p className="text-sm sm:text-base mt-10 md:mt-16 py-4">Powered By Humans, Designed for Scaling</p>
+          <p className="text-sm sm:text-base mt-10 md:mt-16 py-4">
+            Powered By Humans, Designed for Scaling
+          </p>
         </div>
       </div>
     </div>

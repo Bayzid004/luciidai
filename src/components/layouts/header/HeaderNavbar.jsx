@@ -207,7 +207,7 @@ const HeaderNavbar = () => {
           <a href="/contact" className="hover:text-[#cf4697] transition">Contact</a>
           <a href="/freelancers" className="hover:text-[#cf4697] transition">Freelancers</a>
           <a href="/clients" className="hover:text-[#cf4697] transition">Clients</a>
-          <a href="/about" className="hover:text-[#cf4697] transition">About Us</a>
+          <a href="/aboutUs" className="hover:text-[#cf4697] transition">About Us</a>
         </nav>
 
         {/* Mobile navigation */}
