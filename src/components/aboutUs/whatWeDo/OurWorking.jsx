@@ -1,7 +1,7 @@
 import React from 'react';
 import { Brain, Database, FileText, Shield, Users, GraduationCap } from 'lucide-react';
 
-export default function WhatWeDo() {
+export default function OurWorking() {
   const services = [
     {
       icon: <FileText className="w-8 h-8 text-blue-600" />,

@@ -1,8 +1,8 @@
 import React from "react";
 import AboutUs from "./about/AboutUs";
 import MissionValues from "./missionValues/MissionValues";
-import WhatWeDo from "./whatWeDo/WhatWedo";
 import QAPhilosophy from "./qAPhilosophy/QAPhilosophy";
+import OurWorking from "./whatWeDo/OurWorking";
 
 const AboutUsPage = () => {
   return (
@@ -14,7 +14,7 @@ const AboutUsPage = () => {
         <MissionValues />
       </section>
       <section>
-        <WhatWeDo />
+        <OurWorking />
       </section>
       <section>
         <QAPhilosophy />
