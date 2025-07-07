@@ -1,6 +1,6 @@
 import AboutUsPage from "@/components/aboutUs/AboutUsPage";
 
-export default function Home() {
+export default function About() {
   return (
     <div className="container">
       <div>
