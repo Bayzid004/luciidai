@@ -3,6 +3,7 @@ import AboutUs from "./about/AboutUs";
 import MissionValues from "./missionValues/MissionValues";
 import QAPhilosophy from "./qAPhilosophy/QAPhilosophy";
 import OurWorking from "./whatWeDo/OurWorking";
+import MeetTheTeamSection from "./meetTheTeamSection/MeetTheTeamSection";
 
 const AboutUsPage = () => {
   return (
@@ -18,6 +19,9 @@ const AboutUsPage = () => {
       </section>
       <section>
         <QAPhilosophy />
+      </section>
+      <section>
+        <MeetTheTeamSection />
       </section>
     </div>
   );
