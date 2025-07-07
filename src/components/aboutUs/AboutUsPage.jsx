@@ -21,7 +21,7 @@ const AboutUsPage = () => {
         <QAPhilosophy />
       </section>
       <section>
-        <MeetTheTeamSection />
+        {/* <MeetTheTeamSection /> */}
       </section>
     </div>
   );
