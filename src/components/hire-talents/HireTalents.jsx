@@ -349,4 +349,4 @@ const HireTalents = () => {
   );
 };
 
-export default HireTalents; 
+export default HireTalents;
