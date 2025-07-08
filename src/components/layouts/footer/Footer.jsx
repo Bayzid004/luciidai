@@ -64,7 +64,7 @@ const Footer = () => {
 
           {/* Integrations */}
           <div>
-            <h4 className="text-gray-500 font-semibold mb-3">Integrations</h4>
+            <h4 className="text-gray-500 font-semibold mb-3">Tools</h4>
             <ul className="space-y-2">
               <li><Link href="#">Label Studio</Link></li>
               <li><Link href="#">Argilla</Link></li>
