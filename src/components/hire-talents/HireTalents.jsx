@@ -71,7 +71,7 @@ const HireTalents = () => {
         <div className="bg-white/5 backdrop-blur-sm border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex justify-between items-center">
-              <h1 className="text-2xl font-bold text-white">Ainovaq</h1>
+              <h1 className="text-2xl font-bold text-white">LuciidAi</h1>
               <button 
                 onClick={() => window.history.back()}
                 className="text-blue-400 hover:text-blue-300 transition-colors"

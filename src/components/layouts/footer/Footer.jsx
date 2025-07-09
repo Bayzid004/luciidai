@@ -104,7 +104,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="max-w-7xl mx-auto px-4 py-6 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-          <p>© 2025 AINOVAQ All rights reserved.</p>
+          <p>© 2025 LuciidAi All rights reserved.</p>
           <div className="flex space-x-4 mt-4 mr-14 md:mt-0">
             <X className="w-5 h-5 cursor-pointer hover:text-gray-700" />
             <Linkedin className="w-5 h-5 cursor-pointer hover:text-gray-700" />
@@ -132,7 +132,7 @@ const Footer = () => {
             <div className="bg-gradient-to-b from-gray-900 to-black text-white px-5 py-4 relative">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <h2 className="text-lg font-semibold">Ainovaq</h2>
+                  <h2 className="text-lg font-semibold">LuciidAi</h2>
                 </div>
                 <button onClick={() => setOpen(false)} className="text-white">
                   <X className="w-5 h-5" />

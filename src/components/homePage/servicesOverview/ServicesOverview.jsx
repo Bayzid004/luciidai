@@ -12,7 +12,7 @@ export default function ServicesOverview() {
         <div>
           <h2 className="text-4xl font-bold text-gray-800 mb-4 md:mb-0">Services Overview For Your Needs</h2>
           <p className="text-gray-600 text-lg max-w-xl">
-            All-in-one solution to AI training needs in your hand. Ainovaq makes it possible to easily connect with experts for any data annotation requirements.
+            All-in-one solution to AI training needs in your hand. LuciidAi makes it possible to easily connect with experts for any data annotation requirements.
           </p>
         </div>
         <button className="mt-4 md:mt-0 inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition">

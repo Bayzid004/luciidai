@@ -59,7 +59,7 @@ const QAPhilosophy = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Quality isn't an afterthought at Ainovaq; it's built into every step of the process. 
+              Quality isn't an afterthought at LuciidAi; it's built into every step of the process. 
               Our QA systems are run by experts who have worked in the field and know more than just 
               checklists and scorecards. We put human QA agents into the workflow to check, improve, 
               and align outputs based on your changing needs.

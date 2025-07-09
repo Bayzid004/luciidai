@@ -103,7 +103,7 @@ const MeetTheTeamSection = () => {
         />
         <div className="relative text-center px-4">
           <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 max-w-2xl mx-auto">
-            Let Ainovaq's In-House Experts Manage Your Entire AI Data Pipeline
+            Let LuciidAi's In-House Experts Manage Your Entire AI Data Pipeline
           </h2>
           <button className="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition">
             Get A Quote

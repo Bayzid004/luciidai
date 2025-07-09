@@ -22,7 +22,7 @@ const AboutUs = () => {
         <div className="text-center max-w-3xl">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">About Us</h2>
           <p className="text-base sm:text-lg leading-relaxed">
-            <strong>Ainovaq</strong> is a human-in-the-loop AI company that focuses on high-quality data annotation, LLM development, and model alignment.
+            <strong>LuciidAi</strong> is a human-in-the-loop AI company that focuses on high-quality data annotation, LLM development, and model alignment.
             We believe that great AI is only as good as the data that trains it. That's why we offer scalable, ethical, and accurate AI development support
             to startups, businesses, and research labs all over the world.
           </p>
