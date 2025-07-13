@@ -1,8 +1,7 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
-
 
 const HeaderNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -10,6 +9,27 @@ const HeaderNavbar = () => {
   const [annotationOpen, setAnnotationOpen] = useState(false)
   const [hireOpen, setHireOpen] = useState(false)
   const [integrationsOpen, setIntegrationsOpen] = useState(false)
+  
+  // Refs for dropdown containers
+  const servicesRef = useRef(null)
+  const hireRef = useRef(null)
+  const integrationsRef = useRef(null)
+  
+  // Timeout IDs for delayed closing
+  const servicesTimeoutRef = useRef(null)
+  const hireTimeoutRef = useRef(null)
+  const integrationsTimeoutRef = useRef(null)
+  const annotationTimeoutRef = useRef(null)
+
+  // Clean up timeouts on unmount
+  useEffect(() => {
+    return () => {
+      clearTimeout(servicesTimeoutRef.current)
+      clearTimeout(hireTimeoutRef.current)
+      clearTimeout(integrationsTimeoutRef.current)
+      clearTimeout(annotationTimeoutRef.current)
+    }
+  }, [])
 
   const otherServices = [
     'AI & ML Development',
@@ -39,6 +59,46 @@ const HeaderNavbar = () => {
     { label: 'Label Studio', href: '/integrations#label-studio' },
     { label: 'Your Custom Tools', href: '/integrations#custom-tools' },
   ]
+
+  const handleMouseLeave = (type) => {
+    // Set a delay before closing (500ms = 0.5 seconds)
+    const delay = 500
+    
+    if (type === 'services') {
+      clearTimeout(servicesTimeoutRef.current)
+      servicesTimeoutRef.current = setTimeout(() => {
+        setServicesOpen(false)
+        setAnnotationOpen(false)
+      }, delay)
+    } else if (type === 'hire') {
+      clearTimeout(hireTimeoutRef.current)
+      hireTimeoutRef.current = setTimeout(() => {
+        setHireOpen(false)
+      }, delay)
+    } else if (type === 'integrations') {
+      clearTimeout(integrationsTimeoutRef.current)
+      integrationsTimeoutRef.current = setTimeout(() => {
+        setIntegrationsOpen(false)
+      }, delay)
+    } else if (type === 'annotation') {
+      clearTimeout(annotationTimeoutRef.current)
+      annotationTimeoutRef.current = setTimeout(() => {
+        setAnnotationOpen(false)
+      }, delay)
+    }
+  }
+
+  const cancelMouseLeave = (type) => {
+    if (type === 'services') {
+      clearTimeout(servicesTimeoutRef.current)
+    } else if (type === 'hire') {
+      clearTimeout(hireTimeoutRef.current)
+    } else if (type === 'integrations') {
+      clearTimeout(integrationsTimeoutRef.current)
+    } else if (type === 'annotation') {
+      clearTimeout(annotationTimeoutRef.current)
+    }
+  }
 
   return (
     <header className="w-full shadow-sm bg-white z-50">
@@ -76,11 +136,12 @@ const HeaderNavbar = () => {
           {/* Services dropdown container */}
           <div
             className="relative"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => {
-              setServicesOpen(false)
-              setAnnotationOpen(false)
+            ref={servicesRef}
+            onMouseEnter={() => {
+              cancelMouseLeave('services')
+              setServicesOpen(true)
             }}
+            onMouseLeave={() => handleMouseLeave('services')}
           >
             <button className="hover:text-[#cf4697] transition flex items-center">
               Services
@@ -95,12 +156,19 @@ const HeaderNavbar = () => {
             </button>
 
             {servicesOpen && (
-              <div className="absolute top-full left-0 mt-2 w-64 bg-white shadow-xl border rounded-md z-50 p-4">
+              <div 
+                className="absolute top-full left-0 mt-2 w-64 bg-white shadow-xl border rounded-md z-50 p-4"
+                onMouseEnter={() => cancelMouseLeave('services')}
+                onMouseLeave={() => handleMouseLeave('services')}
+              >
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li
                     className="relative"
-                    onMouseEnter={() => setAnnotationOpen(true)}
-                    onMouseLeave={() => setAnnotationOpen(false)}
+                    onMouseEnter={() => {
+                      cancelMouseLeave('annotation')
+                      setAnnotationOpen(true)
+                    }}
+                    onMouseLeave={() => handleMouseLeave('annotation')}
                   >
                     <span className="cursor-pointer font-semibold flex items-center justify-between">
                       Annotation Services
@@ -115,7 +183,11 @@ const HeaderNavbar = () => {
                     </span>
 
                     {annotationOpen && (
-                      <div className="absolute left-full top-0 ml-2 w-52 bg-white border shadow-lg rounded-md p-3 z-50">
+                      <div 
+                        className="absolute left-full top-0 ml-2 w-52 bg-white border shadow-lg rounded-md p-3 z-50"
+                        onMouseEnter={() => cancelMouseLeave('annotation')}
+                        onMouseLeave={() => handleMouseLeave('annotation')}
+                      >
                         <ul className="space-y-2 text-sm">
                           <li><a href="/services#llm-training" className="hover:text-[#cf4697]">LLM Training</a></li>
                           <li><a href="/services#annotations" className="hover:text-[#cf4697]">Annotations</a></li>
@@ -140,8 +212,12 @@ const HeaderNavbar = () => {
           {/* Hire dropdown container */}
           <div
             className="relative"
-            onMouseEnter={() => setHireOpen(true)}
-            onMouseLeave={() => setHireOpen(false)}
+            ref={hireRef}
+            onMouseEnter={() => {
+              cancelMouseLeave('hire')
+              setHireOpen(true)
+            }}
+            onMouseLeave={() => handleMouseLeave('hire')}
           >
             <button className="hover:text-[#cf4697] transition flex items-center">
               Hire
@@ -156,7 +232,11 @@ const HeaderNavbar = () => {
             </button>
 
             {hireOpen && (
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl border rounded-md z-50 p-3">
+              <div 
+                className="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl border rounded-md z-50 p-3"
+                onMouseEnter={() => cancelMouseLeave('hire')}
+                onMouseLeave={() => handleMouseLeave('hire')}
+              >
                 <ul className="space-y-2 text-sm text-gray-700">
                   {hireOptions.map(({ label, href }, index) => (
                     <li key={index}>
@@ -173,8 +253,12 @@ const HeaderNavbar = () => {
           {/* Integrations dropdown container */}
           <div
             className="relative"
-            onMouseEnter={() => setIntegrationsOpen(true)}
-            onMouseLeave={() => setIntegrationsOpen(false)}
+            ref={integrationsRef}
+            onMouseEnter={() => {
+              cancelMouseLeave('integrations')
+              setIntegrationsOpen(true)
+            }}
+            onMouseLeave={() => handleMouseLeave('integrations')}
           >
             <button className="hover:text-[#cf4697] transition flex items-center">
               Integrations
@@ -189,7 +273,11 @@ const HeaderNavbar = () => {
             </button>
 
             {integrationsOpen && (
-              <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-xl border rounded-md z-50 p-3">
+              <div 
+                className="absolute top-full left-0 mt-2 w-56 bg-white shadow-xl border rounded-md z-50 p-3"
+                onMouseEnter={() => cancelMouseLeave('integrations')}
+                onMouseLeave={() => handleMouseLeave('integrations')}
+              >
                 <ul className="space-y-2 text-sm text-gray-700">
                   {integrationOptions.map(({ label, href }, index) => (
                     <li key={index}>
