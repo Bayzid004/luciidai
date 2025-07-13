@@ -107,7 +107,7 @@ const HeaderNavbar = () => {
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
           <Image
-            src="/assets/logo.png"
+            src="/assets/LuciidAI.png"
             width={180}
             height={50}
             alt="Logo"
