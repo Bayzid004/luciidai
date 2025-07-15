@@ -108,8 +108,8 @@ const HeaderNavbar = () => {
         <a href="/" className="flex-shrink-0">
           <Image
             src="/assets/LuciidAI.png"
-            width={180}
-            height={50}
+            width={140}
+            height={16}
             alt="Logo"
             priority
           />
