@@ -12,9 +12,17 @@ export const mailSendHandler = async ({
     const emailTemplate = `
     <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
       <p><strong>Name:</strong> ${data?.name}</p>
+      <p><strong>Phone:</strong> ${data?.phone}</p>
       <p><strong>Email:</strong> <a href="mailto:${data?.email}">${data?.email}</a></p>
       <p><strong>Company:</strong> ${data?.company}</p>
-      <p><strong>Message:</strong> ${data?.message}</p>
+      <p><strong>Project Description:</strong> ${data?.projectDescription}</p>
+      <p><strong>Budget:</strong> ${data?.budget}</p>
+      <p><strong>ProjectSize:</strong> ${data?.projectSize}</p>
+      <p><strong>Selected Service:</strong> ${data?.selectedService}</p>
+      <p><strong>Special Requirements:</strong> ${data?.specialRequirements}</p>
+      <p><strong>Timeline:</strong> ${data?.timeline}</p>
+      <p><strong>Languages:</strong> ${data?.languages}</p>
+      <p><strong>DataType:</strong> ${data?.dataType}</p>
     </div>
   `;
   const payload = {
@@ -32,7 +40,11 @@ export const mailSendHandler = async ({
 
       const res = await fetch(url, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+  "Content-Type": "application/json",
+  "Accept": "application/json",
+  "Origin": "https://ainovaq.vercel.app/"
+},
         body: JSON.stringify(payload),
       });
 
@@ -74,7 +86,11 @@ export const mailSendHandler = async ({
 
       const res = await fetch(url, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+  "Content-Type": "application/json",
+  "Accept": "application/json",
+  "Origin": "https://ainovaq.vercel.app/"
+},
         body: JSON.stringify(payload),
       });
 
