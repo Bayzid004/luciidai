@@ -132,7 +132,7 @@ const Footer = () => {
             <div className="bg-gradient-to-b from-gray-900 to-black text-white px-5 py-4 relative">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <h2 className="text-lg font-semibold">Ainovaq</h2>
+                  <h2 className="text-lg font-semibold">LuciidAi</h2>
                 </div>
                 <button onClick={() => setOpen(false)} className="text-white">
                   <X className="w-5 h-5" />

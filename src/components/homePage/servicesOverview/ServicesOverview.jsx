@@ -6,7 +6,6 @@ import { ArrowRight } from 'lucide-react'
 export default function ServicesOverview() {
   return (
     <section className="py-16 px-4 md:px-20 bg-white">
-      
       {/* Header with View All Button */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
         <div>
