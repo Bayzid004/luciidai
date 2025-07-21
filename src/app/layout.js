@@ -11,9 +11,8 @@ const montserrat = Montserrat({
 })
 
 export const metadata = {
-  title: 'LuciidAi - AI-Powered Solutions',
-  description: 'LuciidAi offers AI-powered solutions to enhance your business operations. Explore our services and transform your workflow with cutting-edge technology.',
-  keywords: 'AI, Data Annotation, Service Provier,Sp, artificial intelligence, machine learning, business solutions, automation, data analysis'
+  title: 'Luciidai',
+  description: 'Luciidai'
 }
 
 export default function RootLayout ({ children }) {

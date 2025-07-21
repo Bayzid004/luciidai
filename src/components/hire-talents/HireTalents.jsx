@@ -1,7 +1,9 @@
 // components/hire-talents/HireTalents.jsx
 'use client';
 
+import { mailSendHandler } from '@/libs/mailSendHandeler';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const HireTalents = () => {
   const [selectedService, setSelectedService] = useState('');
@@ -61,9 +63,11 @@ const HireTalents = () => {
     };
     
     console.log('Form submitted:', submissionData);
+    const from = "hire talent"
+    mailSendHandler({data:submissionData,from,toast});
     // Here you would typically send to your API
-    alert('Thank you! We will contact you within 24 hours to discuss your project.');
   };
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
@@ -71,7 +75,7 @@ const HireTalents = () => {
         <div className="bg-white/5 backdrop-blur-sm border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex justify-between items-center">
-              <h1 className="text-2xl font-bold text-white">LuciidAi</h1>
+              <h1 className="text-2xl font-bold text-white">Luciidai</h1>
               <button 
                 onClick={() => window.history.back()}
                 className="text-blue-400 hover:text-blue-300 transition-colors"

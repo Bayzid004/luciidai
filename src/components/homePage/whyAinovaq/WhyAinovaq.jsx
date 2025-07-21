@@ -8,9 +8,9 @@ export default function WhyAinovaq() {
       
       {/* Title & Description */}
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-4xl font-bold mb-4 text-gray-800">Why LuciidAi?</h2>
+        <h2 className="text-4xl font-bold mb-4 text-gray-800">Why Luciidai?</h2>
         <p className="text-gray-600 text-lg">
-          We in LuciidAi use Strategic AI Operations and partners to help organizations build smarter, faster, and more reliable, accurate systems while keeping the human touch. From startups fine-tuning their first model to enterprises scaling annotation pipelines, we deliver unmatched quality, transparency, and flexibility.
+          We in Luciidai use Strategic AI Operations and partners to help organizations build smarter, faster, and more reliable, accurate systems while keeping the human touch. From startups fine-tuning their first model to enterprises scaling annotation pipelines, we deliver unmatched quality, transparency, and flexibility.
         </p>
       </div>
 

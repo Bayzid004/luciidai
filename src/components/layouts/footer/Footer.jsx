@@ -104,7 +104,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="max-w-7xl mx-auto px-4 py-6 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-          <p>© 2025 LuciidAi All rights reserved.</p>
+          <p>© 2025 LUCIIDAI All rights reserved.</p>
           <div className="flex space-x-4 mt-4 mr-14 md:mt-0">
             <X className="w-5 h-5 cursor-pointer hover:text-gray-700" />
             <Linkedin className="w-5 h-5 cursor-pointer hover:text-gray-700" />
