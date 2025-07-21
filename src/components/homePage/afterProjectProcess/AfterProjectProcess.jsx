@@ -26,7 +26,7 @@ const AfterProjectProcess = () => {
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-6">
             <div className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-              After Project Assignment to Ainovaq
+              After Project Assignment to Luciidai
             </div>
           </div>
           
@@ -35,7 +35,7 @@ const AfterProjectProcess = () => {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Every project at Ainovaq passes through a 3-layer Quality Assurance pipeline. For best outcome, 
+            Every project at Luciidai passes through a 3-layer Quality Assurance pipeline. For best outcome, 
             we ensure to implement multiple Quality Checks throughout the entire process.
           </p>
         </div>
@@ -95,10 +95,10 @@ const AfterProjectProcess = () => {
           <div className="relative z-10">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Let Ainovaq's In-House Experts Manage Your Entire AI Data Pipeline
+                Let Luciidai's In-House Experts Manage Your Entire AI Data Pipeline
               </h2>
               <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                Tight on resources or scaling fast? Let the Ainovaq's in-house experts take the initiatives for you. 
+                Tight on resources or scaling fast? Let the Luciidai's in-house experts take the initiatives for you. 
                 From hiring people to completing the project, we offer full-service management for your AI data labeling project.
               </p>
             </div>

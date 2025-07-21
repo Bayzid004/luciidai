@@ -43,7 +43,7 @@ export default function OurWorking() {
             What We Do
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Ainovaq gives you the tools, people, and processes you need to make AI work well, 
+            Luciidai gives you the tools, people, and processes you need to make AI work well, 
             whether you're training a small chatbot or fine-tuning a model with a billion parameters.
           </p>
         </div>

@@ -67,7 +67,7 @@ const FreelancerVettingSection = () => {
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">Apply as a Freelancer</h1>
           <h2 className="text-xl sm:text-2xl font-semibold text-blue-600">Vetting Process</h2>
           <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Welcome to <span className="font-medium">Ainovaq</span> talent gateway. We believe our clients deserve data crafted by the best minds in the industry. Every annotator, trainer, and coder goes through a multi-layered vetting process before joining live projects.
+            Welcome to <span className="font-medium">Luciidai</span> talent gateway. We believe our clients deserve data crafted by the best minds in the industry. Every annotator, trainer, and coder goes through a multi-layered vetting process before joining live projects.
           </p>
           <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Here’s a transparent look at how we hire freelancers and onboard talent—and what you can expect at each stage.
@@ -76,7 +76,7 @@ const FreelancerVettingSection = () => {
 
         {/* Why Join Section */}
         <div className="space-y-8">
-          <h3 className="text-2xl font-semibold text-gray-900 text-center">Why Join Ainovaq?</h3>
+          <h3 className="text-2xl font-semibold text-gray-900 text-center">Why Join Luciidai?</h3>
           <div className="grid gap-6 md:grid-cols-3">
             {benefits.map((benefit, index) => (
               <div key={index} className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">

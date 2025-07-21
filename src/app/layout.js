@@ -11,8 +11,8 @@ const montserrat = Montserrat({
 })
 
 export const metadata = {
-  title: 'AiNovaq',
-  description: 'AiNovaq'
+  title: 'Luciidai',
+  description: 'Luciidai'
 }
 
 export default function RootLayout ({ children }) {

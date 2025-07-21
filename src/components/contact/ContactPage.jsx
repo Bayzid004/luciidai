@@ -1,6 +1,8 @@
 'use client'
 import React, { useState } from 'react';
 import { MapPin, Mail, Send } from 'lucide-react';
+import { toast } from 'react-hot-toast';
+import ContactForm from './ContactForm';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +11,7 @@ const ContactPage = () => {
     subject: '',
     message: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -18,12 +21,52 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Message sent successfully!');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    
+    const emailTemplate = `
+      <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+        <p><strong>Name:</strong> ${formData?.name}</p>
+        <p><strong>Email:</strong> <a href="mailto:${formData?.email}">${formData?.email}</a></p>
+        <p><strong>Subject:</strong> ${formData?.subject}</p>
+        <p><strong>Message:</strong> ${formData?.message}</p>
+      </div>
+    `;
+
+    const payload = {
+      projectFor: "bayzidweb04@gmail.com",
+      brand: "Luciid Ai",
+      name: formData?.name,
+      email: formData?.email,
+      message: emailTemplate,
+    };
+
+    const url = `${process.env.NEXT_PUBLIC_API_URL}/api/send-email`;
+
+    try {
+      setIsLoading(true);
+
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await res.json();
+
+      if (!res.ok) {
+        toast.error("Failed to send! Please try again.");
+        return;
+      }
+
+      toast.success("Message sent successfully!");
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Failed to send! Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -95,66 +138,7 @@ const ContactPage = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg border border-white/20">
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6">
-              Send a Message
-            </h3>
-            
-            <div className="space-y-4 sm:space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Your Name"
-                    className="w-full px-4 py-3 sm:py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors text-sm sm:text-base bg-white/80"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="Your Email"
-                    className="w-full px-4 py-3 sm:py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors text-sm sm:text-base bg-white/80"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <input
-                  type="text"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  placeholder="Subject"
-                  className="w-full px-4 py-3 sm:py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors text-sm sm:text-base bg-white/80"
-                />
-              </div>
-              
-              <div>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  placeholder="Your Message"
-                  rows={4}
-                  className="w-full px-4 py-3 sm:py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none transition-colors text-sm sm:text-base bg-white/80"
-                ></textarea>
-              </div>
-              
-              <button
-                onClick={handleSubmit}
-                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 sm:py-4 px-4 rounded-xl font-medium hover:from-blue-700 hover:to-indigo-700 transition-all transform hover:scale-[1.02] shadow-lg text-sm sm:text-base flex items-center justify-center space-x-2"
-              >
-                <Send className="w-4 h-4" />
-                <span>Send Message</span>
-              </button>
-            </div>
-          </div>
+          <ContactForm/>
         </div>
       </div>
     </div>
