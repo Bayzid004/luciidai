@@ -6,7 +6,12 @@ export const mailSendHandler = async ({
   onClose,
   from,
 }) => {
-  console.log(data);
+
+  const apiUrl =
+      process.env.NODE_ENV === "production"
+        ? process.env.NEXT_PUBLIC_API_URL
+        : "http://localhost:3000";
+    const url = `${apiUrl}/api/send-email`;
 
   if (from == "hire talent") {
     const emailTemplate = `
@@ -25,7 +30,7 @@ export const mailSendHandler = async ({
       <p><strong>DataType:</strong> ${data?.dataType}</p>
     </div>
   `;
-  const payload = {
+    const payload = {
       projectFor:
         process.env.NODE_ENV === "production"
           ? "bayzidweb04@gmail.com"
@@ -35,16 +40,14 @@ export const mailSendHandler = async ({
       email: data?.email,
       message: emailTemplate,
     };
-    const url = `${process.env.NEXT_PUBLIC_API_URL}/api/send-email`;
-     try {
-
+    try {
       const res = await fetch(url, {
         method: "POST",
-        headers: { 
-  "Content-Type": "application/json",
-  "Accept": "application/json",
-  "Origin": "https://ainovaq.vercel.app/"
-},
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          Origin: "https://ainovaq.vercel.app/",
+        },
         body: JSON.stringify(payload),
       });
 
@@ -79,18 +82,16 @@ export const mailSendHandler = async ({
       email: data?.email,
       message: emailTemplate,
     };
-    const url = `${process.env.NEXT_PUBLIC_API_URL}/api/send-email`;
-
     try {
       setIsLoading(true);
 
       const res = await fetch(url, {
         method: "POST",
-        headers: { 
-  "Content-Type": "application/json",
-  "Accept": "application/json",
-  "Origin": "https://ainovaq.vercel.app/"
-},
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          Origin: "https://ainovaq.vercel.app/",
+        },
         body: JSON.stringify(payload),
       });
 

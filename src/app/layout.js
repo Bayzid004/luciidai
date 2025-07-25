@@ -1,28 +1,30 @@
-import { Montserrat } from 'next/font/google'
-import './globals.css'
-import Header from '@/components/layouts/header/Header'
-import Footer from '@/components/layouts/footer/Footer'
+import { Montserrat } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/layouts/header/Header";
+import Footer from "@/components/layouts/footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 const montserrat = Montserrat({
-  weight: ['400'],
-  subsets: ['latin'],
-  variable: '--font-montserrat',
-  display: 'swap'
-})
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
 
 export const metadata = {
-  title: 'Luciidai',
-  description: 'Luciidai'
-}
+  title: "Luciidai",
+  description: "Luciidai",
+};
 
-export default function RootLayout ({ children }) {
+export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body className={`${montserrat.variable} antialiased`}>
         <Header />
         {children}
         <Footer />
+        <ToastContainer />
       </body>
     </html>
-  )
+  );
 }
