@@ -47,7 +47,7 @@ const MissionValues = () => {
         {/* Image */}
         <div className="w-full h-[400px] relative rounded-2xl overflow-hidden shadow-lg">
           <Image
-            src="/assets/missionValues.jpg" // replace with your image path
+            src="/assets/ourMission&Values.webp" // replace with your image path
             alt="Mission and Values"
             fill
             className="object-cover"
