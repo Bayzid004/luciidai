@@ -68,6 +68,7 @@ export const mailSendHandler = async ({
       <p><strong>Name:</strong> ${data?.name}</p>
       <p><strong>Email:</strong> <a href="mailto:${data?.email}">${data?.email}</a></p>
       <p><strong>Subject:</strong> ${data?.subject}</p>
+      <p><strong>Phone:</strong> ${data?.phone}</p>
       <p><strong>Message:</strong> ${data?.message}</p>
     </div>
   `;
