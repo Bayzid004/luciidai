@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import { ArrowRight } from 'lucide-react'
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 export default function ServicesOverview() {
   return (
@@ -9,9 +9,15 @@ export default function ServicesOverview() {
       {/* Header with View All Button */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
         <div>
-          <h2 className="text-4xl font-bold text-gray-800 mb-4 md:mb-0">Services Overview For Your Needs</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-4 md:mb-0">
+            Services Overview For Your Needs
+          </h2>
           <p className="text-gray-600 text-lg max-w-xl">
-            All-in-one solution to AI training needs in your hand. Luciidai makes it possible to easily connect with experts for any data annotation requirements.
+            {/* All-in-one solution to AI training needs in your hand. Luciidai makes it possible to easily connect with experts for any data annotation requirements. */}
+            We design custom AI agents and fine tune models that automate
+            workflows, enhance business efficiency, and accelerate growth. At
+            Luciid AI, we help teams scale smarter with intelligent automation
+            tailored to your unique goals and operations.
           </p>
         </div>
         <button className="mt-4 md:mt-0 inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition">
@@ -21,7 +27,6 @@ export default function ServicesOverview() {
 
       {/* Content Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-
         {/* Image */}
         <div className="w-full">
           <Image
@@ -44,15 +49,17 @@ export default function ServicesOverview() {
             "Custom Solutions",
             "Coding",
             "Dataset Curation",
-            "Fine Tuning"
+            "Fine Tuning",
           ].map((service, index) => (
-            <div key={index} className="p-6 border rounded-2xl shadow-sm hover:shadow-lg transition text-center">
+            <div
+              key={index}
+              className="p-6 border rounded-2xl shadow-sm hover:shadow-lg transition text-center"
+            >
               <h3 className="text-lg font-semibold text-gray-800">{service}</h3>
             </div>
           ))}
         </div>
-
       </div>
     </section>
-  )
+  );
 }
