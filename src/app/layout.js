@@ -16,7 +16,8 @@ export const metadata = {
   title: "Luciidai",
   description:
     "We design custom AI agents and fine tune models that automate workflows, enhance business efficiency, and accelerate growth. At Luciid AI, we help teams scale smarter with intelligent automation tailored to your unique goals and operations.",
-  // keywords: "his is a discription of this page",
+  keywords:
+    "We design custom AI agents and fine tune models that automate workflows, enhance business efficiency, and accelerate growth.",
 };
 
 export default function RootLayout({ children }) {
